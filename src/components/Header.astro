@@ -1,0 +1,34 @@
+---
+import type { PageLink } from "../utils/types";
+import ThemeToggle from "./ThemeToggle";
+const links: PageLink[] = [
+  {
+    text: 'about',
+    link: '#about'
+  },
+  {
+    text: 'projects',
+    link: '#projects'
+  },
+  {
+    text: 'contact',
+    link: '#contact'
+  },
+]
+---
+
+<header class="w-screen h-[90px] border-b dark:border-none shadow-sm dark:shadow-gray-700 px-[20px]">
+  <nav class="w-auto h-full max-w-[1200px] mx-auto flex items-center justify-between">
+    <a href="/" class="text-gray-900 dark:text-white text-2xl">Eric Lich</a>
+    <ul class="h-full flex items-center gap-12 ">
+      {links.map(link => (
+        <li class="text-gray-900 dark:text-white ">
+          <a href={link.link}>{link.text}</a>  
+        </li>
+      ))}
+      <li>
+        <ThemeToggle client:load/>
+      </li>
+    </ul>
+  </nav>
+</header>
