@@ -1,6 +1,7 @@
 ---
 import type { PageLink } from "../utils/types";
 import ThemeToggle from "./ThemeToggle";
+
 const links: PageLink[] = [
   {
     text: 'about',
@@ -19,7 +20,7 @@ const links: PageLink[] = [
 
 <header class="w-screen h-[90px] bg-white dark:bg-zinc-900 border-b dark:border-none shadow-sm dark:shadow-gray-700 px-[20px] fixed top-0 z-50">
   <nav class="w-auto h-full max-w-[1200px] mx-auto flex items-center justify-between">
-    <a href="/" class="text-gray-900 dark:text-white text-2xl">Eric Lichtensztein</a>
+    <a href="/" class="text-gray-900 dark:text-white text-2xl font-semibold">Eric Lich</a>
     <ul class="h-full flex items-center gap-12 ">
       {links.map(link => (
         <li class="text-gray-900 dark:text-white hidden md:block">
