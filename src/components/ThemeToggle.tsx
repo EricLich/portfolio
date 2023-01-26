@@ -49,7 +49,7 @@ const ThemeToggle = () => {
             aria-label="toggle theme"
             className={`${
               checked ? "bg-white " : ""
-            } cursor-pointer rounded-3xl p-2`}
+            } cursor-pointer rounded-3xl p-2 text-black`}
           >
             {t === "light" ? <IoSunny /> : <IoMoon />}
           </button>
