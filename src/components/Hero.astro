@@ -1,7 +1,31 @@
-<section id="hero" class="w-full flex justify-between">
-	<h2>
-    Hey! <br/>
-    I'm Eric Lichtensztein, a front end
-    developer based on Buenos Aires, Argentina.
-  </h2>
-</section>	
+---
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5/index";
+import Link from "./Link.astro";
+---
+
+<section
+  id="hero"
+  class="lg:mt-48 h-[512px] w-[95%] mx-auto flex justify-between gap-8"
+>
+  <div class="w-[50%] h-full flex flex-col justify-center md:gap-5 lg:gap-8">
+    <h2 class="md:text-5xl lg:text-7xl font-semibold">Hey!</h2>
+    <p
+      class="md:max-w-[90%] lg:max-w-[512px] md:text-base lg:text-lg font-medium md:leading-6 lg:leading-8"
+    >
+      I'm Eric Lichtensztein, a front end developer based on Buenos Aires,
+      Argentina, focused on technologies such as Next Js, React and Typescript.
+    </p>
+
+    <div class="flex gap-3 justify-start">
+      <Link to="#" text="Linkedin" type="filled" targetBlank={true} />
+      <Link to="#" text="Github" type="ghost" targetBlank={true} />
+    </div>
+  </div>
+  <div class="w-[45%] flex items-center">
+    <img
+      src="../../public/assets/images/profile.jpg"
+      alt="profile pic"
+      class="hidden md:block w-full max-w-lg md:rounded-[62px] lg:rounded-[82px] shadow-lg shadow-gray-400 dark:shadow-gray-700"
+    />
+  </div>
+</section>

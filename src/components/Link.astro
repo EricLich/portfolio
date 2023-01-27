@@ -1,0 +1,29 @@
+---
+export interface Props {
+  type: "filled" | "ghost";
+  text: string;
+  to: string;
+  targetBlank: boolean;
+}
+
+const { type, to, text, targetBlank } = Astro.props;
+
+const styles = (): string => {
+  if (type === "filled") {
+    return "bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 border-2 border-zinc-900 dark:border-white hover:bg-white dark:hover:bg-zinc-900 hover:text-zinc-900 dark:hover:text-white duration-150";
+  }
+  if (type === "ghost") {
+    return "text-center bg-white dark:bg-zinc-900 border-2 border-zinc-900 dark:border-white hover:text-white hover:bg-zinc-900 hover:border-zinc-900 dark:hover:bg-white dark:hover:text-zinc-900 duration-200";
+  }
+
+  return "";
+};
+---
+
+<a
+  href={to}
+  target={targetBlank ? "_blank" : "_self"}
+  class={`md:w-32 lg:w-44 flex items-center md:text-sm lg:text-base justify-center md:py-1 lg:py-2 text-center rounded-md font-medium ${styles()}`}
+>
+  {text}
+</a>
