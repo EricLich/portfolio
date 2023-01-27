@@ -5,10 +5,17 @@ import Link from "./Link.astro";
 
 <section
   id="hero"
-  class="lg:mt-48 h-[512px] w-[95%] mx-auto flex justify-between gap-8"
+  class="mt-36 md:mt-48 h-auto md:h-[512px] w-[95%] mx-auto flex justify-between md:gap-8"
 >
-  <div class="w-[50%] h-full flex flex-col justify-center md:gap-5 lg:gap-8">
-    <h2 class="md:text-5xl lg:text-7xl font-semibold">Hey!</h2>
+  <div
+    class="w-full md:w-[50%] h-auto md:h-full flex flex-col justify-center gap-7 md:gap-5 lg:gap-8"
+  >
+    <h2 class="text-4xl md:text-5xl lg:text-7xl font-semibold">Hey!</h2>
+    <img
+      src="../../public/assets/images/profile.jpg"
+      alt="profile pic"
+      class="block md:hidden w-full max-w-lg rounded-[32px] lg:rounded-[82px] shadow-md shadow-gray-400 dark:shadow-gray-700"
+    />
     <p
       class="md:max-w-[90%] lg:max-w-[512px] md:text-base lg:text-lg font-medium md:leading-6 lg:leading-8"
     >
@@ -16,12 +23,12 @@ import Link from "./Link.astro";
       Argentina, focused on technologies such as Next Js, React and Typescript.
     </p>
 
-    <div class="flex gap-3 justify-start">
+    <div class="flex gap-2 md:gap-3 justify-start">
       <Link to="#" text="Linkedin" type="filled" targetBlank={true} />
       <Link to="#" text="Github" type="ghost" targetBlank={true} />
     </div>
   </div>
-  <div class="w-[45%] flex items-center">
+  <div class="w-0 md:w-[45%] flex items-center">
     <img
       src="../../public/assets/images/profile.jpg"
       alt="profile pic"
