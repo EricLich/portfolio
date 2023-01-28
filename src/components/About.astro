@@ -1,0 +1,46 @@
+---
+import type { Experience } from "../utils/types";
+import ExperienceData from "./ExperienceData.astro";
+
+const devExperience: Experience[] = [
+  {
+    timeSpan: "Dec 2021 - Oct 2022",
+    company: "Aleia - Digital x Data",
+    title: "Front End Web Developer",
+    description:
+      "Development of Web Applications utilizing modern development tools as Next.Js, React.Js, Typescript, GraphQL, Redux Toolkit, Jotai, TailwindCSS, SASS, Styled components and different technologies that may be more suited for different kinds of scenarios. Development of custom themed Wordpress sites with PHP and plugins as ACF (Advanced Custom Fields) to meet the different clients needs.",
+  },
+  {
+    timeSpan: "Aug 2021 - Sep 2021",
+    company: "Maximus Gaming Hardware",
+    title: "Full Stack Web Developer",
+    description:
+      "Development of new functionalities for the company ́s website, using HTML, CSS, Vanilla JS, JQuery, Vue JS and SQL.",
+  },
+];
+
+const otherExperience: Experience[] = [
+  {
+    timeSpan: "2017 - 2019",
+    company: "DP-20 - Dimama S.R.L",
+    title: "Production assistant",
+    description:
+      "Stock control, part orders (national and international) for the products the company sells, parts reception, production planning, logistics, process optimization, development of automated control sheets, stock system development, manufacturing, personnel management, customer service, preparation of orders for retail clients, wholesalers and for an important automotive company located in General Pacheco.",
+  },
+];
+---
+
+<section id="about" class="w-[95%] mx-auto">
+  <h2 class="text-2xl lg:text-3xl font-semibold">About me</h2>
+  <p class="mt-10 leading-7 md:text-justify">
+    I focus on frontend development at the moment, using Next Js, React Js and
+    Typescript as my main tools. I'm passionate about quality and performance
+    and I'm always trying to find new thing to learn! My goal is to become a
+    fullstack developer that can handle every task, including DevOps.
+  </p>
+
+  <div class="flex flex-col md:flex-row gap-10">
+    <ExperienceData title="Dev experience:" experiences={devExperience} />
+    <ExperienceData title="Other experience" experiences={otherExperience} />
+  </div>
+</section>
