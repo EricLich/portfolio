@@ -92,7 +92,7 @@ const projects: ProjectType[] = [
 ];
 ---
 
-<section id="projects" class="w-full mx-auto">
+<section id="projects" class="w-full mx-auto mb-20 md:mb-6 lg:mb-36">
   <h2 class="text-2xl lg:text-3xl font-semibold">Latest projects:</h2>
   <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-5 lg:gap-8">
     {projects.reverse().map((project) => <Project project={project} />)}
