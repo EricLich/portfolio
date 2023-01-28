@@ -1,0 +1,90 @@
+---
+import type { Project as ProjectType } from "../utils/types";
+import Project from "./Project.astro";
+const projects: ProjectType[] = [
+  {
+    name: "The Button",
+    url: "https://the-button-lime.vercel.app/",
+    technologies: ["React", "Typescript", "Tailwind CSS"],
+    imgUrl: "/assets/images/projects/the-button.png",
+  },
+  {
+    name: "NCR Challenge - Sistema de Cuentas Bancarias",
+    url: "https://challenge-ncr-ssfw.vercel.app/",
+    technologies: [
+      "Next Js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "React Context",
+    ],
+    imgUrl: "/assets/images/projects/ncr-challenge-image.png",
+  },
+  {
+    name: "Rick and Morty Characters",
+    url: "https://rick-and-morty-challenge-drab.vercel.app/",
+    technologies: ["React", "Typescript", "Tailwind CSS", "React Context"],
+    imgUrl: "/assets/images/projects/rick-morty-characters.png",
+  },
+  {
+    name: "TheFlix - Paisanos Challenge",
+    url: "https://theflix.vercel.app/",
+    technologies: [
+      "Next Js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "TMDB api",
+      "Mui icons",
+    ],
+    imgUrl: "/assets/images/projects/theflix-image.png",
+    companyUrl: "https://www.paisanos.io/",
+  },
+  {
+    name: "Tech Zone - Aerolab Challenge",
+    url: "https://aerolab-frontend-challenge-five.vercel.app/",
+    technologies: [
+      "Next Js",
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "React Context",
+      "Zustand",
+      "Framer Motion",
+      "HeadlessUI",
+      "React Loading Skeleton",
+    ],
+    imgUrl: "/assets/images/projects/techzone-image.png",
+    companyUrl: "https://aerolab.us/",
+  },
+  {
+    name: "Cat Wiki - devChallenges",
+    url: "https://cat-wiki-coral.vercel.app/",
+    technologies: [
+      "React",
+      "Typescript",
+      "Tailwind CSS",
+      "React Router Dom",
+      "React Query",
+      "HeadlessUI",
+      "React Loading Skeleton",
+    ],
+    imgUrl: "/assets/images/projects/catwiki-image.png",
+    companyUrl: "https://devchallenges.io/",
+  },
+  {
+    name: "Personal portfolio",
+    url: "#",
+    technologies: ["Astro Js", "Typescript", "Tailwind CSS"],
+    imgUrl: "/assets/images/projects/portfolio-image.png",
+  },
+];
+---
+
+<section id="projects" class="w-[95%] mx-auto">
+  <h2 class="text-2xl lg:text-3xl font-semibold">Latest projects:</h2>
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-8">
+    {projects.reverse().map((project) => <Project project={project} />)}
+  </div>
+</section>

@@ -1,0 +1,43 @@
+---
+import type { Project } from "../utils/types";
+
+export interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<article
+  class="w-full flex flex-col border border-zinc-900 dark:border-gray-600 rounded-md"
+>
+  <div
+    class="flex items-center justify-start gap-2 w-full p-3 border-b border-b-zinc-900 dark:border-b-gray-600"
+  >
+    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+    <div class="w-3 h-3 rounded-full bg-yellow-300"></div>
+    <div class="w-3 h-3 rounded-full bg-green-600"></div>
+  </div>
+  <div
+    class="w-full h-10 border-b-zinc-900 dark:border-b-gray-600 flex items-center px-2 py-2 gap-2"
+  >
+    <div
+      class="flex-1 p-2 flex items-center h-full rounded-xl bg-white dark:bg-gray-700 border border-zinc-900"
+    >
+      <p class="text-[11px] font-medium text-zinc-900 dark:text-white">
+        {project.url}
+      </p>
+    </div>
+    <a href={project.url} target="_blank">→</a>
+  </div>
+  <div class="w-full">
+    <a href={project.url} target="_blank"
+      ><img
+        src={project.imgUrl}
+        alt={`${project.name} image`}
+        loading="lazy"
+      /></a
+    >
+  </div>
+  {project.name}
+</article>

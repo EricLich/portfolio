@@ -13,4 +13,12 @@ export type Experience = {
 export type Technology = {
   name: string;
   imgPath: string;
+};
+
+export type Project = {
+  name: string;
+  url: string;
+  imgUrl: string;
+  technologies: Technology['name'][];
+  companyUrl?: string;
 }
