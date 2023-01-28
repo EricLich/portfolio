@@ -1,6 +1,7 @@
 ---
 import type { Experience, Technology } from "../utils/types";
 import ExperienceData from "./ExperienceData.astro";
+import Technologies from "./Technologies.astro";
 
 const devExperience: Experience[] = [
   {
@@ -28,81 +29,6 @@ const otherExperience: Experience[] = [
       "Stock control, part orders (national and international) for the products the company sells, parts reception, production planning, logistics, process optimization, development of automated control sheets, stock system development, manufacturing, personnel management, customer service, preparation of orders for retail clients, wholesalers and for an important automotive company located in General Pacheco.",
   },
 ];
-
-const technologies: Technology[] = [
-  {
-    name: "React Js",
-    imgPath: "/assets/images/logos/react-logo.png",
-  },
-  {
-    name: "Next Js",
-    imgPath: "/assets/images/logos/next-logo.png",
-  },
-  {
-    name: "Astro",
-    imgPath: "/assets/images/logos/astro-logo.png",
-  },
-  {
-    name: "Typescript",
-    imgPath: "/assets/images/logos/ts-logo.png",
-  },
-  {
-    name: "Redux",
-    imgPath: "/assets/images/logos/redux-logo.png",
-  },
-  {
-    name: "Jotai",
-    imgPath: "/assets/images/logos/jotai-logo.png",
-  },
-  {
-    name: "Zustand",
-    imgPath: "/assets/images/logos/zustand-logo.png",
-  },
-  {
-    name: "GraphQl",
-    imgPath: "/assets/images/logos/graphql-logo.png",
-  },
-  {
-    name: "Tailwind CSS",
-    imgPath: "/assets/images/logos/tailwind-logo.png",
-  },
-  {
-    name: "Sass",
-    imgPath: "/assets/images/logos/sass-logo.png",
-  },
-  {
-    name: "Styled components",
-    imgPath: "/assets/images/logos/styled-comps-logo.png",
-  },
-  {
-    name: "Node Js",
-    imgPath: "/assets/images/logos/node-logo.png",
-  },
-  {
-    name: "Mongo DB",
-    imgPath: "/assets/images/logos/mongodb-logo.png",
-  },
-  {
-    name: "SQL",
-    imgPath: "/assets/images/logos/sql-logo.png",
-  },
-  {
-    name: "Wordpress",
-    imgPath: "/assets/images/logos/wordpress-logo.png",
-  },
-  {
-    name: "Java",
-    imgPath: "/assets/images/logos/java-logo.png",
-  },
-  {
-    name: "PHP",
-    imgPath: "/assets/images/logos/php-logo.png",
-  },
-  {
-    name: "Docker",
-    imgPath: "/assets/images/logos/docker-logo.webp",
-  },
-];
 ---
 
 <section id="about" class="w-[95%] mx-auto">
@@ -120,24 +46,6 @@ const technologies: Technology[] = [
   </div>
 
   <div class="flex flex-col gap-8 mt-20 w-full">
-    <h3 class="text-2xl mt-8 mb-5">Technologies:</h3>
-    <ul class="flex flex-wrap gap-2 w-full">
-      {
-        technologies.map((tech) => (
-          <li class="w-full md:w-36 md:h-60 border border-zinc-900 dark:border-white rounded-lg shadow-sm flex flex-col items-center hover:scale-105 duration-200 overflow-hidden">
-            <div class="w-full h-[75%] flex items-center justify-center bg-white">
-              <img
-                src={tech.imgPath}
-                alt={`${tech.name} logo`}
-                class="w-[20%] md:w-[80%] object-contain aspect-square "
-              />
-            </div>
-            <p class="py-6 md:py-0 h-[25%] font-medium flex items-center px-2 text-center">
-              {tech.name}
-            </p>
-          </li>
-        ))
-      }
-    </ul>
+    <Technologies client:visible />
   </div>
 </section>
