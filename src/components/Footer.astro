@@ -1,3 +1,7 @@
+---
+const year: number = new Date().getFullYear();
+---
+
 <footer
   class="w-full mt-20 h-[120px] md:h-[90px] bg-white dark:bg-zinc-900 border-t border-t-zinc-300 dark:border-t-zinc-600 dark:shadow-gray-700"
 >
@@ -5,6 +9,6 @@
     class="w-[90%] max-w-[1200px] mx-auto h-full flex flex-col md:flex-row items-center justify-evenly md:justify-between"
   >
     <p class="text-center leading-7">Built with Astro, React, Typescript and Tailwind ❤️</p>
-    <p class="leading-7">&copy; Eric Lichtensztein - 2023</p>
+    <p class="leading-7">&copy; Eric Lichtensztein - {year}</p>
   </div>
 </footer>
