@@ -9,3 +9,8 @@ export type Experience = {
   title: string;
   description: string;
 };
+
+export type Technology = {
+  name: string;
+  imgPath: string;
+}
