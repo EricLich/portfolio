@@ -4,9 +4,10 @@ export interface Props {
   text: string;
   to: string;
   targetBlank: boolean;
+  icon?: any;
 }
 
-const { type, to, text, targetBlank } = Astro.props;
+const { type, to, text, targetBlank, icon } = Astro.props;
 
 const styles = (): string => {
   if (type === "filled") {
@@ -26,4 +27,5 @@ const styles = (): string => {
   class={`w-32 md:w-32 lg:w-44 flex items-center md:text-sm lg:text-base justify-center py-1 md:py-1 lg:py-2 text-center rounded-md font-medium ${styles()}`}
 >
   {text}
+  {icon && icon}
 </a>

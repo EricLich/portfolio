@@ -9,35 +9,57 @@ const { project } = Astro.props;
 ---
 
 <article
-  class="w-full flex flex-col border border-zinc-900 dark:border-gray-600 rounded-md"
+  class="w-full flex flex-col border border-zinc-900 dark:border-gray-600 rounded-lg overflow-hidden"
 >
   <div
-    class="flex items-center justify-start gap-2 w-full p-3 border-b border-b-zinc-900 dark:border-b-gray-600"
+    class="flex items-center justify-start gap-2 w-full p-3 bg-zinc-600 dark:bg-gray-600 border-b border-b-zinc-900 dark:border-b-gray-600"
   >
     <div class="w-3 h-3 rounded-full bg-red-500"></div>
     <div class="w-3 h-3 rounded-full bg-yellow-300"></div>
     <div class="w-3 h-3 rounded-full bg-green-600"></div>
   </div>
+
   <div
     class="w-full h-10 border-b-zinc-900 dark:border-b-gray-600 flex items-center px-2 py-2 gap-2"
   >
     <div
       class="flex-1 p-2 flex items-center h-full rounded-xl bg-white dark:bg-gray-700 border border-zinc-900"
     >
-      <p class="text-[11px] font-medium text-zinc-900 dark:text-white">
+      <p class="text-[11px] md:font-medium text-zinc-900 dark:text-white">
         {project.url}
       </p>
     </div>
     <a href={project.url} target="_blank">→</a>
   </div>
+
   <div class="w-full">
     <a href={project.url} target="_blank"
-      ><img
-        src={project.imgUrl}
-        alt={`${project.name} image`}
-        loading="lazy"
-      /></a
+      ><img src={project.imgUrl} alt={`${project.name} image`} /></a
     >
   </div>
-  {project.name}
+
+  <div class="h-auto px-3 py-4 flex flex-col items-start gap-2 md:gap-4">
+    <h4 class="font-semibold text-lg md:text-xl">{project.name}</h4>
+    <p class="font-light md:font-base">{project.description}</p>
+    <h5 class="mb-2 font-medium">Technologies:</h5>
+    <ul class="flex flex-wrap gap-2 lg:gap-3 items-center">
+      {
+        project.technologies.map((tech) => (
+          <li class="text-sm font-medium px-2 py-1 border border-zinc-300  rounded-full bg-zinc-300 text-zinc-900 dark:text-zinc-600  ">
+            {tech}
+          </li>
+        ))
+      }
+    </ul>
+    {
+      project.companyName && project.companyUrl && (
+        <div class="flex items-center gap-2 mt-4">
+          <p>Company link:</p>
+          <a href={project.companyUrl} target="_blank" class="font-semibold">
+            {project.companyName} ↗︎
+          </a>
+        </div>
+      )
+    }
+  </div>
 </article>

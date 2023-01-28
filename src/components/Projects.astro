@@ -5,12 +5,16 @@ const projects: ProjectType[] = [
   {
     name: "The Button",
     url: "https://the-button-lime.vercel.app/",
+    description:
+      "Countdown button that simulates other user clicking and stores the amount of times it's been clicked, restarts the countdown and assigns a color depending on when was the button clicked",
     technologies: ["React", "Typescript", "Tailwind CSS"],
     imgUrl: "/assets/images/projects/the-button.png",
   },
   {
     name: "NCR Challenge - Sistema de Cuentas Bancarias",
     url: "https://challenge-ncr-ssfw.vercel.app/",
+    description:
+      "Simulates a bank machine that gives you options when you want to take money from it - Implements a handmade pagination system and each account has it's data coming from an api",
     technologies: [
       "Next Js",
       "React",
@@ -23,12 +27,16 @@ const projects: ProjectType[] = [
   {
     name: "Rick and Morty Characters",
     url: "https://rick-and-morty-challenge-drab.vercel.app/",
+    description:
+      "Displays 2 columns with characters of Rick & Morty TV Show and lets you select one from each columns, then shows the user the episodes in which both characters were present and the ones in which they were not sharing screen time",
     technologies: ["React", "Typescript", "Tailwind CSS", "React Context"],
     imgUrl: "/assets/images/projects/rick-morty-characters.png",
   },
   {
     name: "TheFlix - Paisanos Challenge",
     url: "https://theflix.vercel.app/",
+    description:
+      "Challenge from company Paisanos that I had to adapt to use TMDB api and bring movies and TV Shows from it, displaying all the information following the design provided in a Figma file.",
     technologies: [
       "Next Js",
       "React",
@@ -39,11 +47,14 @@ const projects: ProjectType[] = [
       "Mui icons",
     ],
     imgUrl: "/assets/images/projects/theflix-image.png",
+    companyName: "Paisanos",
     companyUrl: "https://www.paisanos.io/",
   },
   {
     name: "Tech Zone - Aerolab Challenge",
     url: "https://aerolab-frontend-challenge-five.vercel.app/",
+    description:
+      "Points based ecommerce that made use of Aerolab's provided API, giving the users products with their costs. The user can refill it's points, use them to redeem products and all the products section has filtering available.",
     technologies: [
       "Next Js",
       "React",
@@ -56,11 +67,14 @@ const projects: ProjectType[] = [
       "React Loading Skeleton",
     ],
     imgUrl: "/assets/images/projects/techzone-image.png",
+    companyName: "Aerolab",
     companyUrl: "https://aerolab.us/",
   },
   {
     name: "Cat Wiki - devChallenges",
     url: "https://cat-wiki-coral.vercel.app/",
+    description:
+      "App that provides information of different cat breeds making use of the Figma file provided by devchallenges.io and an api providing cat breeds information as well as pictures of them.",
     technologies: [
       "React",
       "Typescript",
@@ -71,10 +85,12 @@ const projects: ProjectType[] = [
       "React Loading Skeleton",
     ],
     imgUrl: "/assets/images/projects/catwiki-image.png",
+    companyName: "devChallenges",
     companyUrl: "https://devchallenges.io/",
   },
   {
     name: "Personal portfolio",
+    description: "Personal portfolio site making use of Astro framework",
     url: "#",
     technologies: ["Astro Js", "Typescript", "Tailwind CSS"],
     imgUrl: "/assets/images/projects/portfolio-image.png",
@@ -82,9 +98,9 @@ const projects: ProjectType[] = [
 ];
 ---
 
-<section id="projects" class="w-[95%] mx-auto">
+<section id="projects" class="w-full lg:w-[95%] mx-auto">
   <h2 class="text-2xl lg:text-3xl font-semibold">Latest projects:</h2>
-  <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-8">
+  <div class="w-full grid grid-cols-1 md:grid-cols-2 mt-7 gap-5 lg:gap-8">
     {projects.reverse().map((project) => <Project project={project} />)}
   </div>
 </section>

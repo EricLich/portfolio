@@ -18,7 +18,9 @@ export type Technology = {
 export type Project = {
   name: string;
   url: string;
+  description: string;
   imgUrl: string;
   technologies: Technology['name'][];
+  companyName?: string;
   companyUrl?: string;
 }
