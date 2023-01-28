@@ -29,7 +29,6 @@ const { project } = Astro.props;
         {project.url}
       </p>
     </div>
-    <a href={project.url} target="_blank">→</a>
   </div>
 
   <div class="w-full">
@@ -39,7 +38,8 @@ const { project } = Astro.props;
   </div>
 
   <div class="h-auto px-3 py-4 flex flex-col items-start gap-2 md:gap-4">
-    <h4 class="font-semibold text-lg md:text-xl">{project.name}</h4>
+    <a href={project.url} target="_blank" class="font-semibold text-lg md:text-xl">{project.name}</a
+    >
     <p class="font-light md:font-base">{project.description}</p>
     <h5 class="mb-2 font-medium">Technologies:</h5>
     <ul class="flex flex-wrap gap-2 lg:gap-3 items-center">
