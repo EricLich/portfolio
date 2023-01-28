@@ -4,31 +4,35 @@ import ThemeToggle from "./ThemeToggle";
 
 const links: PageLink[] = [
   {
-    text: 'about',
-    link: '#about'
+    text: "about",
+    link: "#about",
   },
   {
-    text: 'projects',
-    link: '#projects'
+    text: "projects",
+    link: "#projects",
   },
   {
-    text: 'contact',
-    link: '#contact'
+    text: "contact",
+    link: "#contact",
   },
-]
+];
 ---
 
-<header class="w-screen h-[90px] bg-white dark:bg-zinc-900 border-b dark:border-none shadow-sm dark:shadow-gray-700 fixed top-0 z-50">
+<header
+  class="w-screen h-[90px] bg-white dark:bg-zinc-900 border-b dark:border-none shadow-sm dark:shadow-gray-700 fixed top-0 z-50"
+>
   <nav class="w-[90%] h-full max-w-[1200px] mx-auto flex items-center justify-between">
     <a href="/" class="text-2xl font-semibold">Eric Lich</a>
-    <ul class="h-full flex items-center gap-12 ">
-      {links.map(link => (
-        <li class="font-medium hover:text-gray-500 duration-150  dark:hover:text-gray-400 hidden md:block">
-          <a href={link.link}>{link.text}</a>  
-        </li>
-      ))}
+    <ul class="h-full flex items-center gap-12">
+      {
+        links.map((link) => (
+          <li class="font-medium hover:text-gray-500 duration-150  dark:hover:text-gray-400 hidden md:block">
+            <a href={link.link}>{link.text}</a>
+          </li>
+        ))
+      }
       <li>
-        <ThemeToggle client:load/>
+        <ThemeToggle client:load />
       </li>
     </ul>
   </nav>
