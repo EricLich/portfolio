@@ -33,7 +33,7 @@ const { project } = Astro.props;
 
   <div class="w-full">
     <a href={project.url} target="_blank"
-      ><img src={project.imgUrl} alt={`${project.name} image`} /></a
+      ><img src={project.imgUrl} alt={`${project.name} image`} loading="lazy" /></a
     >
   </div>
 
