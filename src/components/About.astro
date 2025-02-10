@@ -1,9 +1,28 @@
 ---
-import type { Experience, Technology } from "../utils/types";
+import type { Experience } from "../utils/types";
 import ExperienceData from "./ExperienceData.astro";
 import Technologies from "./Technologies.astro";
 
 const devExperience: Experience[] = [
+  {
+    timeSpan: `May 2024 - Present (Full Time) <br> Feb 2024 - May 2024 (Part Time)`,
+    company: "Zite",
+    title: "Full Stack Developer",
+    description: `Developing an AI-powered SaaS platform designed to streamline investment workflows,
+particularly in private markets where assets like equity, debt, and real estate are traded
+privately. As one of only two developers in this fast-paced startup, I take a "front-to-
+back" approach, utilizing cutting-edge technologies like Next.js, React.js, TypeScript,
+Tailwind CSS, PostgreSQL, Drizzle ORM, Supabase, Azure, Azure OpenAI, AWS, and
+Node.js.`
+  },
+  {
+    timeSpan: "Sep 2023 - Present",
+    company: "Sira Agency",
+    title: "Co-Founder and CTO",
+    description: `We are a software development factory dedicated to simplifying your life through
+innovative technology solutions. Join us on a journey to transform your ideas into reality
+with efficiency, creativity, and excellence. Save hours of work now!`
+  },
   {
     timeSpan: "Sep 2023 - Present",
     company: "Conexa",
@@ -55,9 +74,7 @@ const otherExperience: Experience[] = [
 <section id="about" class="w-full mx-auto mb-20 md:mb-6 lg:mb-36">
   <h2 class="text-2xl lg:text-3xl font-semibold">About me</h2>
   <p class="mt-10 leading-7 md:text-justify">
-    I focus on frontend development at the moment, using Next Js, React Js and Typescript as my main
-    tools. I'm passionate about quality and performance and I'm always trying to find new things to
-    learn! My goal is to become a fullstack developer that can handle every task, including DevOps.
+    Focused on technologies like Next.js, React, and TypeScript, with experience in backend development using Node.js, PostgreSQL, Supabase, and cloud solutions like Azure and AWS. Passionate about integrating AI services, including Azure OpenAI for embeddings and intelligent data processing, to deliver high-performance and intuitive applications. I&apos;m proactive, responsible, and always eager to learn, teach, and grow both professionally and personally.
   </p>
 
   <div class="flex flex-col md:flex-row gap-10">

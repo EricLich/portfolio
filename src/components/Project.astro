@@ -32,8 +32,8 @@ const { project } = Astro.props;
   </div>
 
   <div class="w-full">
-    <a href={project.url} target="_blank"
-      ><img src={project.imgUrl} alt={`${project.name} image`} loading="lazy" /></a
+    <a href={project.url} target="_blank" class="max-h-[364px] overflow-hidden"
+      ><img src={project.imgUrl} alt={`${project.name} image`} loading="lazy" class="w-full max-h-[364px] object-fit" /></a
     >
   </div>
 
